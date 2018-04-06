@@ -1,4 +1,4 @@
-# Dagger2ApplicationContextToActivity
+# Dagger2InjectApplicationAndActivityContext
 This project shows how we can pass the Application Context to Activity with every bit of explanation. 
 
 Result
