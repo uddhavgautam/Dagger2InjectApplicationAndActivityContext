@@ -1,12 +1,12 @@
 package com.example.gaute.dagger2passapplicationcontext.di.module;
 
 import com.example.gaute.dagger2passapplicationcontext.MainActivity;
-import com.example.gaute.dagger2passapplicationcontext.di.component.MainActivityComponent;
 
 import dagger.Module;
 import dagger.android.ContributesAndroidInjector;
 
-@Module(subcomponents = MainActivityComponent.class)
+//@Module(subcomponents = MainActivityComponent.class)
+@Module
 public interface ApplicationBindingModule {
 
 

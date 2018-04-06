@@ -5,7 +5,6 @@ import android.util.Log;
 
 import javax.inject.Inject;
 
-import dagger.android.AndroidInjection;
 import dagger.android.support.DaggerAppCompatActivity;
 
 /**
@@ -28,7 +27,7 @@ public class MainActivity extends DaggerAppCompatActivity /* For Dagger Support 
 
         This line injects MyActivity instance into Dagger Framework
          */
-        AndroidInjection.inject(this);
+//        AndroidInjection.inject(this);
 
     }
 
