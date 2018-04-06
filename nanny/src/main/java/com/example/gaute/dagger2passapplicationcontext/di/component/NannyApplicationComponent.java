@@ -2,7 +2,6 @@ package com.example.gaute.dagger2passapplicationcontext.di.component;
 
 import com.example.gaute.dagger2passapplicationcontext.NannyApplication;
 import com.example.gaute.dagger2passapplicationcontext.di.module.ApplicationBindingModule;
-import com.example.gaute.dagger2passapplicationcontext.di.module.NannyApplicationModule;
 
 import javax.inject.Singleton;
 
@@ -16,13 +15,13 @@ import dagger.android.support.AndroidSupportInjectionModule;
 
 @Singleton
 @Component(modules = {
-        AndroidSupportInjectionModule.class,
-        ApplicationBindingModule.class,
-        NannyApplicationModule.class
+        AndroidSupportInjectionModule.class /* it makes Dagger generates DaggerNannyApplicationComponent */,
+        ApplicationBindingModule.class /* it generates AndroidInjector.Builder<MainActivity>, which
+        is used to inject requested dependencies by MainActivity */
 })
 public interface NannyApplicationComponent extends AndroidInjector<NannyApplication> {
 
-    @Component.Builder
+    @Component.Builder /* Simply tells this Builder is DaggerNannyApplicationComponent’s inner Builder class */
     abstract class Builder extends AndroidInjector.Builder<NannyApplication> {
     }
 }
